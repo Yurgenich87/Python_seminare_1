@@ -10,23 +10,26 @@
 # **Ввод:** пара-ра-рам рам-пам-папам па-ра-па-да
 #     **Вывод:** Парам пам-пам
 
-poem = input("Введите стихотворение: ")
+def count_vowels(word):
+    vowels = "aeiouyAEIOUY"
+    count = 0
+    for letter in word:
+        if letter in vowels:
+            count += 1
+    return count
 
-lines = poem.split(" ")
-syllables = []
-for line in lines:
-    words = line.split("-")
-    syllable_count = 0
-    for word in words:
-        vowels = "aeiouy"
-        count = 0
-        for letter in word:
-            if letter.lower() in vowels:
-                count += 1
-        syllable_count += count
-    syllables.append(syllable_count)
 
-if len(set(syllables)) == 1:
+poem = input("Введите стихотворение Винни-Пуха: ")
+phrases = poem.split()
+vowel_counts = []
+
+for phrase in phrases:
+    words = phrase.split('-')
+    vowel_counts_in_phrase = [count_vowels(word) for word in words]
+    if len(set(vowel_counts_in_phrase)) != 1:
+        print("Пам парам")
+        break
+    vowel_counts.append(vowel_counts_in_phrase[0])
+
+if len(set(vowel_counts)) == 1:
     print("Парам пам-пам")
-else:
-    print("Пам парам")
