@@ -1,1 +1,1 @@
-# Python_seminare_1
+# Home work №2
