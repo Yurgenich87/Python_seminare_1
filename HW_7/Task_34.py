@@ -6,33 +6,6 @@
 # если с ритмом все в порядке и “Пам парам”, если с ритмом все не в порядке
 #
 # *Пример:*
-#
-# **Ввод:** пара-ра-рам рам-пам-папам па-ра-па-да
-#     **Вывод:** Парам пам-пам
-
-# def count_vowels(word):
-#     vowels = "aeiouyAEIOUY"
-#     count = 0
-#     for letter in word:
-#         if letter in vowels:
-#             count += 1
-#     return count
-#
-#
-# poem = input("Введите стихотворение Винни-Пуха: ")
-# phrases = poem.split()
-# vowel_counts = []
-#
-# for phrase in phrases:
-#     words = phrase.split('-')
-#     vowel_counts_in_phrase = [count_vowels(word) for word in words]
-#     if len(set(vowel_counts_in_phrase)) != 1:
-#         print("Пам парам")
-#         break
-#     vowel_counts.append(vowel_counts_in_phrase[0])
-#
-# if len(set(vowel_counts)) == 1:
-#     print("Парам пам-пам")
 
 vowels = 'аеёиоуыэюя'
 poem = input("Введите стихотворение: ").lower()
